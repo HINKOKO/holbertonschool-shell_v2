@@ -6,7 +6,7 @@
   <img src="https://bashlogo.com/img/symbol/jpg/full_colored_light.jpg" />
 </p>
 
-<h3 align="right">by Anthony Pizzony & Nehemie Mombanga<h3>
+<h3 align="right"><em>by Anthony Pizzony</em><h3>
 
 # (Not so) Simple Shell 
 
