@@ -11,9 +11,22 @@
 
 int new_exit(char *cmd, char **args, char **env)
 {
+	int valid_arg;
+
 	(void)cmd;
-	(void)args;
 	(void)env;
 
+
+	if (args[1])
+	/* there is an exit argument */
+	{
+		valid_arg = atoi_error(args[1]);
+		if (valid_arg == -1)
+		{
+			fprintf(stderr, "illegal stuff\n");
+			return (1);
+		}
+		exit(valid_arg);
+	}
 	return (133);
 }

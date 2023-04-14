@@ -29,6 +29,7 @@ typedef struct built_in
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <signal.h>
+#include <limits.h>
 
 /* Program Running commands */
 
@@ -67,6 +68,10 @@ int _strncmp(char *s1, char *s2, size_t n);
 
 /* About environment */
 char *_getenv(char *name);
+
+/* error management */
+int atoi_error(char *s);
+
 
 
 #endif
