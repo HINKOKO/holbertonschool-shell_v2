@@ -15,7 +15,7 @@ int change_dir(char *cmd, char **args, char **env)
 
 	curdir = getcwd(buffer, 1024);
 	if (!curdir)
-		printf("Shit happens\n");
+		return (-1);
 	if (!args[1])
 	{
 		dir = _getenv("HOME");
@@ -27,7 +27,6 @@ int change_dir(char *cmd, char **args, char **env)
 		chdir_ret = chdir(args[1]);
 	if (chdir_ret == -1)
 	{
-		fprintf(stderr, "shit happened\n");
 		return (-1);
 	}
 	return (0);
