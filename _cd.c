@@ -22,7 +22,7 @@ int change_dir(char *cmd, char **args, char **env)
 	{
 		dir = _getenv("HOME");
 		if (!dir)
-			printf("HOME NOT SET\n");
+			chdir_ret = chdir ((dir = _getenv("PWD=")) ? dir : "/");
 		chdir_ret = chdir(dir);
 	}
 	else if (_strcmp(args[1], "-") == 0)
