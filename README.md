@@ -1,4 +1,4 @@
-<h1 align="center" style="color:#FFFFFF"> C - Simple Shell<h1>
+<h1 align="center" style="color:#FFFFFF"><strong>Simple Shell - Implemented in C language </strong><h1>
 
 <br>
 
