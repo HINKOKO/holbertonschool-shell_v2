@@ -60,7 +60,7 @@ int _strncmp(char *s1, char *s2, size_t n);
 
 
 /* About environment */
-char *_getenv(const char *name);
+char *_getenv(char *name);
 
 
 #endif

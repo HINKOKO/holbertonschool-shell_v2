@@ -5,7 +5,7 @@
  * 
 */
 
-char *_getenv(const char *name)
+char *_getenv(char *name)
 {
 	int len = _strlen(name);
 	char **tmp = environ;
