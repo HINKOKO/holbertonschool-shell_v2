@@ -9,6 +9,12 @@
 
 extern char **environ;
 
+/**
+ * struct built_in - struct handling the builtins functions
+ * @command: command entered
+ * @f: pointer function
+*/
+
 typedef struct built_in
 {
 	char *command;
