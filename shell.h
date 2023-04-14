@@ -56,6 +56,8 @@ int _strcmp(char *s1, char *s2);
 char *_strcpy(char *dest, const char *src);
 char *_strcat(char *dest, char *src);
 char *_strdup(const char *str);
+int _strncmp(char *s1, char *s2, size_t n);
+
 
 /* About environment */
 char *_getenv(const char *name);
