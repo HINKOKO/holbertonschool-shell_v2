@@ -13,7 +13,7 @@ char *_getenv(char *name)
 
 	while (*tmp != NULL)
 	{
-		if (_strncmp(*tmp, name, len) == 0 && (*tmp)[len] == '=')
+		if (_strncmp(*tmp, name, len) == 1 && (*tmp)[len] == '=')
 		{
 			/* return a pointer to the corresponding value string of VAR*/
 			/* just as man 3 getenv behaves */
