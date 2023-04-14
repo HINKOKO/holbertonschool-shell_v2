@@ -1,8 +1,9 @@
 #include "shell.h"
 
 /**
- * 
- * 
+ * _getenv - custom implementation of "getenv"
+ * @name: the name from which to retrieve the env
+ * Return: the env or NULL
 */
 
 char *_getenv(char *name)

@@ -1,9 +1,11 @@
 #include "shell.h"
 
 /**
- * 
- * 
- * 
+ * _strncmp - mimic strncmp function
+ * compares two strings up to n bytes
+ * @s1: string 1
+ * @s2: string 2
+ * Return: 1 when strings are equal to n bytes, 0 otherwise
 */
 
 int _strncmp(char *s1, char *s2, size_t n)

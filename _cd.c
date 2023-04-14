@@ -1,9 +1,11 @@
 #include "shell.h"
 
 /**
- * 
- * 
- * 
+ * change_dir - function for trigger builtin 'cd'
+ * @cmd: command entered by user
+ * @args: array of arguments
+ * @env: array of strings of env
+ * Return: 0 for success, -1 otherwise
 */
 
 int change_dir(char *cmd, char **args, char **env)
