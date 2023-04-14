@@ -23,8 +23,8 @@ int new_exit(char *cmd, char **args, char **env)
 		valid_arg = atoi_error(args[1]);
 		if (valid_arg == -1)
 		{
-			fprintf(stderr, "illegal stuff\n");
-			return (1);
+			fprintf(stderr, "./hsh: 1: exit: Illegal number: %s\n", args[1]);
+			exit(2);
 		}
 		exit(valid_arg);
 	}
