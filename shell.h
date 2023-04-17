@@ -51,11 +51,15 @@ char **get_args(char *buff);
 size_t wordcount(char *s);
 void free_args(char **args);
 
+/* signal handling */
+
+void handle_signal(__attribute__((unused)) int signum);
 
 /* Env functions */
 
 int print_env(char *cmd, char **args, char **env);
-void handle_signal(__attribute__((unused)) int signum);
+int _setenv(char *name, const char *value, int overwrite);
+
 
 /* string utilities */
 int _strlen(const char *s);
