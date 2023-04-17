@@ -11,7 +11,7 @@
 
 int new_exit(char *cmd, char **args, char **env)
 {
-	int valid_arg;
+	int exit_code = 0;
 
 	(void)cmd;
 	(void)env;
@@ -20,13 +20,12 @@ int new_exit(char *cmd, char **args, char **env)
 	if (args[1])
 	/* there is an exit argument */
 	{
-		valid_arg = atoi_error(args[1]);
-		if (valid_arg == -1)
+		exit_code = atoi(args[1]);
+		if (exit_code == -1)
 		{
 			fprintf(stderr, "./hsh: 1: exit: Illegal number: %s\n", args[1]);
 			exit(2);
 		}
-		exit(valid_arg);
 	}
-	return (133);
+	exit (exit_code);
 }
