@@ -87,10 +87,17 @@ char *_strcat(char *dest, char *src)
 
 char *_strdup(const char *str)
 {
-	char *dst = malloc(_strlen(str) + 1);
+	int len = 0;
+	char *dst;
 
+	if (!str)
+		return (NULL);
+	while (*str++)
+		len++;
+	dst = malloc(sizeof(char) * (len + 1));
 	if (!dst)
 		return (NULL);
-	_strcpy(dst, str);
+	for (len++; len--;)
+		dst[len] = *--str;
 	return (dst);
 }
