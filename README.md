@@ -65,7 +65,7 @@ gcc -Wall -Werror Wextra -pedantic -std=gnu89
 
 Clone this repository: <br>
 ```
-git clone git@github.com:NehemieMbg/holbertonschool-simple_shell.git
+git clone git@github.com:HINKOKO/holbertonschool-shell_v2.git
 ```
 Switch inside the directory: 
 ```
@@ -81,7 +81,7 @@ You're all good to use the shell either in Interactive mode, to do so enter in y
 ```
 Then a prompt will be displayed, and you can enter commands.
 
-The other way is in Non-Interactive mode, for example if you want to list files and directory, command ```ls```, call the shell like so:
+The other way is in Non-Interactive mode, by piping the command to executable "hsh";  for example if you want to list files and directory, command ```ls```, call the shell like so:
 ```
 echo "/bin/ls" | ./hsh
 ```
@@ -93,10 +93,7 @@ This is what our shell looks like:
 
 ## Authors
 
-*The two following persons worked on this project:* <br>
-Nehemie Mombanga <br>
-&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- nehemie.mbg@gmail.com <br>
-&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- https://github.com/NehemieMbg
+*The following person worked on this project:* <br>
 
 Anthony Pizzoni <br>
 &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- piotr62@live.fr <br>
@@ -104,7 +101,7 @@ Anthony Pizzoni <br>
 
 ## License
 
-Our simple shell is open-source, free to download and use without permissions.
+This C-Simple-Shell is open-source, free to download and use without permissions.
 
 
 
