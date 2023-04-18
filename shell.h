@@ -69,8 +69,11 @@ char *_strdup(const char *str);
 int _strncmp(char *s1, char *s2, size_t n);
 
 
+
 /* About environment */
 char *_getenv(char *name);
+int _setenv(char *name, const char *value, int overwrite);
+
 
 /* error management */
 int atoi_error(char *s);
