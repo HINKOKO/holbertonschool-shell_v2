@@ -42,5 +42,10 @@ int change_dir(char *cmd, char **args, char **env)
 		fprintf(stderr, "./hsh: 1: cd: can't cd to %s\n", args[1]);
 		return (-1);
 	}
+	else
+	{
+		setenv("OLDPWD", _getenv("PWD"), 1);
+		setenv("PWD", getcwd(buffer, 1024), 1);
+	}
 	return (0);
 }
