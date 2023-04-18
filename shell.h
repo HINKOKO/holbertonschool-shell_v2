@@ -58,7 +58,6 @@ void handle_signal(__attribute__((unused)) int signum);
 /* Env functions */
 
 int print_env(char *cmd, char **args, char **env);
-int _setenv(char *name, const char *value, int overwrite);
 
 
 /* string utilities */
