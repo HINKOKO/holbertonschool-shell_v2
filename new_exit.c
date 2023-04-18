@@ -27,5 +27,5 @@ int new_exit(char *cmd, char **args, char **env)
 			exit(2);
 		}
 	}
-	exit (exit_code);
+	exit(exit_code);
 }
