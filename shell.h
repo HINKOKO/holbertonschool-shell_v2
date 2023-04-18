@@ -72,6 +72,7 @@ int _strncmp(char *s1, char *s2, size_t n);
 
 /* About environment */
 char *_getenv(char *name);
+int build_env(char *name, char *value, int overwrite);
 
 
 /* error management */
