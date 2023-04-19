@@ -78,6 +78,15 @@ int build_env(char *name, char *value, int overwrite);
 /* error management */
 int atoi_error(char *s);
 
+/* working on solutions */
+char *write_variable(const char *name, const char *val, char *dest);
+size_t overwrite_after(char *delim, char *str, char *dest);
+char **copy_double(char **old, char **new);
+char **malloc_double(size_t size);
+char **realloc_environ(char **env, size_t new_size);
+
+
+
 
 
 #endif
