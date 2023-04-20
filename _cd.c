@@ -33,7 +33,7 @@ int change_dir(char *cmd, char **args, char **env)
 			printf("%s\n", curdir);
 			return (1);
 		}
-		_puts(_getenv("OLDPWD")), _putchar('\n');
+		printf("%s\n", _getenv("OLDPWD"));
 		chdir_ret = chdir((dir = _getenv("OLDPWD")) ? dir : "/");
 	}
 	else
