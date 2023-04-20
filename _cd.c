@@ -23,20 +23,21 @@ int change_dir(char *cmd, char **args, char **env)
 		dir = _getenv("HOME");
 		if (!dir)
 			chdir_ret = chdir((dir = _getenv("PWD")) ? dir : "/");
-		chdir_ret = chdir(dir);
+		else
+			chdir_ret = chdir(dir);
 	}
 	else if (_strcmp(args[1], "-") == 0)
 	{
 		if (!_getenv("OLDPWD"))
 		{
-			fprintf(stderr, "OLDPWD not set\n");
+			printf("%s\n", curdir);
 			return (1);
 		}
+		_puts(_getenv("OLDPWD")), _putchar('\n');
 		chdir_ret = chdir((dir = _getenv("OLDPWD")) ? dir : "/");
 	}
 	else
 		chdir_ret = chdir(args[1]);
-
 	if (chdir_ret == -1)
 	{
 		fprintf(stderr, "./hsh: 1: cd: can't cd to %s\n", args[1]);

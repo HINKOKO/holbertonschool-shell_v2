@@ -6,6 +6,8 @@
 
 #define EXIT_SUCCESS 0
 #define EXIT_FAILURE 1
+#define WRITE_BUF_SIZE 1024
+#define BUF_FLUSH -1
 
 extern char **environ;
 
@@ -18,8 +20,9 @@ extern char **environ;
 typedef struct built_in
 {
 	char *command;
-	int (*f)(char *cmd, char **args, char **env);
+	int (*f)();
 } built_in;
+
 
 /* Libraries */
 #include <stdio.h>
@@ -44,7 +47,6 @@ int (*check_builtin(char *command))(char *cmd, char **args, char **env);
 int new_exit(char *cmd, char **args, char **env);
 int change_dir(char *cmd, char **args, char **env);
 
-
 /* Strings functions */
 
 char **get_args(char *buff);
@@ -67,6 +69,9 @@ char *_strcpy(char *dest, const char *src);
 char *_strcat(char *dest, char *src);
 char *_strdup(const char *str);
 int _strncmp(char *s1, char *s2, size_t n);
+void _puts(char *str);
+int _putchar(char c);
+
 
 
 
@@ -78,15 +83,12 @@ int build_env(char *name, char *value, int overwrite);
 /* error management */
 int atoi_error(char *s);
 
-/* working on solutions */
-char *write_variable(const char *name, const char *val, char *dest);
-size_t overwrite_after(char *delim, char *str, char *dest);
-char **copy_double(char **old, char **new);
+/* env variation */
 char **malloc_double(size_t size);
+char **copy_double(char **old, char **new);
+size_t overwrite_after(char *delim, char *str, char *dest);
 char **realloc_environ(char **env, size_t new_size);
-
-
-
+char *write_variable(const char *name, const char *val, char *dest);
 
 
 #endif

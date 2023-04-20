@@ -21,3 +21,42 @@ int _strncmp(char *s1, char *s2, size_t n)
 		return (1);
 	return (0);
 }
+
+/**
+ * _puts - prints a string stdout
+ * @str: pointer to string to be printed
+*/
+
+void _puts(char *str)
+{
+	int i = 0;
+
+	if (!str)
+		return;
+	while (str[i] != '\0')
+	{
+		_putchar(str[i]);
+		i++;
+	}
+}
+
+/**
+ * _putchar - writes character to stdout
+ * @c: character to print
+ * Return: 1 for success, -1 otherwise
+*/
+
+int _putchar(char c)
+{
+	static int i;
+	static char buf[WRITE_BUF_SIZE];
+
+	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
+	{
+		write(1, buf, i);
+		i = 0;
+	}
+	if (c != BUF_FLUSH)
+		buf[i++] = c;
+	return (1);
+}
