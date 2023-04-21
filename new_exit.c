@@ -10,17 +10,9 @@
 
 int new_exit(char *cmd, char **args, char **env)
 {
-	int status = 0;
-
 	(void)cmd;
+	(void)args;
 	(void)env;
-
-	if (args[1])
-	{
-		status = atoi_error(args[1]);
-		exit (status);
-	}
-	free(args);
 
 	return (133);
 }
