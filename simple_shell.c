@@ -38,8 +38,8 @@ int main(int ac __attribute__((unused)), char **av, char **env)
 			free(buff);
 			if (ret == 133)
 				exit(EXIT_SUCCESS);
-			else if (ret == 134)
-				exit(127);
+			else if (ret == 127)
+				exit(ERR_FND);
 			line++;
 		}
 	}
