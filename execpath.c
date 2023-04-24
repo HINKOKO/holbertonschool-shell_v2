@@ -34,7 +34,7 @@ int exec_path(char **args, char **env, int line)
 			{
 				printf("./hsh: %d: %s: not found\n", line, args[0]);
 				free(fullpath);
-				return (134);
+				return (127);
 			}
 		}
 
