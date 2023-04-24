@@ -10,20 +10,17 @@
 
 int new_exit(char *cmd, char **args, char **env)
 {
-	int stat = 0;
+	int check = 0;
 
 	(void)cmd;
 	(void)env;
 
 	if (args[1])
 	{
-		stat = atoi_error(args[1]);
-		if (stat == -1)
-		{
-			return (134);
-		}
-		free_args(args);
+		check = atoi_error(args[1]);
+		if (check == -1)
+			return (1);
 	}
-	free(args);
-	exit(stat);
+	free_args(args);
+	exit(check);
 }

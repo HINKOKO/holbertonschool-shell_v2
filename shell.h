@@ -93,6 +93,7 @@ int build_env(char *name, char *value, int overwrite);
 /* error management */
 int atoi_error(char *s);
 
+
 /* env variation */
 char **malloc_double(size_t size);
 char **copy_double(char **old, char **new);

@@ -9,22 +9,19 @@
 
 int atoi_error(char *s)
 {
-	int i = 0;
-	unsigned long int res = 0;
+	int i;
+	int res = 0;
 
 	if (*s == '+')
 		s++;
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i]; i++)
 	{
 		if (s[i] >= '0' && s[i] <= '9')
-		{
-			res *= 10;
-			res += (s[i] - '0');
-			if (res > INT_MAX)
-				return (-1);
-		}
+			res = res * 10 + (s[i] - '0');
 		else
 			return (-1);
 	}
+	if (res > INT_MAX)
+		return (-1);
 	return (res);
 }
