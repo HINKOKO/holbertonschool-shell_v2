@@ -32,7 +32,7 @@ int exec_path(char **args, char **env, int line)
 		{
 			if ((execve(fullpath, args, env)) == -1)
 			{
-				printf("./hsh: %d: %s: not found\n", line, args[0]);
+				fprintf(stderr, "./hsh: %d: %s: not found\n", line, args[0]);
 				free(fullpath);
 				return (127);
 			}
