@@ -6,6 +6,7 @@
 
 #define EXIT_SUCCESS 0
 #define EXIT_FAILURE 1
+#define ERR_FND 127
 #define WRITE_BUF_SIZE 1024
 #define BUF_FLUSH -1
 
@@ -23,6 +24,14 @@ typedef struct built_in
 	int (*f)();
 } built_in;
 
+typedef struct passinfo
+{
+	char *arg;
+	char **argv;
+	char *path;
+	int status;
+} info_t;
+
 
 /* Libraries */
 #include <stdio.h>
@@ -33,6 +42,7 @@ typedef struct built_in
 #include <sys/wait.h>
 #include <signal.h>
 #include <limits.h>
+#include <fcntl.h>
 
 /* Program Running commands */
 
@@ -89,6 +99,10 @@ char **copy_double(char **old, char **new);
 size_t overwrite_after(char *delim, char *str, char *dest);
 char **realloc_environ(char **env, size_t new_size);
 char *write_variable(const char *name, const char *val, char *dest);
+
+/* stream tools */
+
+
 
 
 #endif
