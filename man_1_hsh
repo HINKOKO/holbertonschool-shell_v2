@@ -44,10 +44,10 @@ involves the use of piping (`|'): \ \ \ \ \  > echo `ls' | ./hsh
 .SH BUILTINS
 .PP
 The following builtins are supported: \- exit exits the program \- env
-prints the environments variables
+prints the environments variables \- cd change current directory to specified one
 .SH BUGS
 .PP
 No known bugs at this stage (August the 3rd, 2022).
 .SH AUTHORS
 .PP
-Nehemie Mombanga and Anthony Pizzoni
+Anthony Pizzoni

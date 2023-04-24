@@ -71,9 +71,9 @@ Switch inside the directory:
 ```
 cd holbertonschool-simple_shell
 ```
-Compile all the files with the correct flags and the wildcard *.c :
+Compile all the files using the Makefile (target `all`) :
 ```
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -o ./hsh
+make all
 ```
 You're all good to use the shell either in Interactive mode, to do so enter in your terminal:
 ```
@@ -87,9 +87,9 @@ echo "/bin/ls" | ./hsh
 ```
 ## Example of use
 
-This is what our shell looks like:
+Take a look at this example of use:
 
-![DuragShell](/Screenshots/durag%20shell.png)
+![DuragShell](/screenshots/DURAGSHELL.png)
 
 ## Authors
 
