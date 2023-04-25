@@ -15,7 +15,6 @@ int exec_path(char **args, char **env, int line)
 	char *fullpath = NULL, *PATH;
 
 	PATH = _getenv("PATH");
-
 	if (!PATH && (execve(args[0], args, env)) == -1)
 	{
 		fprintf(stderr, "./hsh: %d: %s: not found\n", line, args[0]);
@@ -34,10 +33,9 @@ int exec_path(char **args, char **env, int line)
 			{
 				fprintf(stderr, "./hsh: %d: %s: not found\n", line, args[0]);
 				free(fullpath);
-				return (127);
+				exit(2);
 			}
 		}
-
 		else if (child > 0)
 			wait(NULL);
 		else
