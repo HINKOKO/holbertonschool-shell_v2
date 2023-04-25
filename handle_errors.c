@@ -9,19 +9,19 @@
 
 int atoi_error(char *s)
 {
-	int i;
-	int res = 0;
+	int i, sign;
+	unsigned int number;
 
-	if (*s == '+')
-		s++;
-	for (i = 0; s[i]; i++)
+	i = number = 0;
+	sign = 1;
+	for (; (!(s[i] >= 48 && s[i] <= 57)) && s[i] != '\0'; i++)
 	{
-		if (s[i] >= '0' && s[i] <= '9')
-			res = res * 10 + (s[i] - '0');
-		else
-			return (-1);
+		if (s[i] == 45)
+			sign *= -1;
 	}
-	if (res > INT_MAX)
-		return (-1);
-	return (res);
+	if (s[i] == '\0')
+		return (number);
+	for (; (s[i] >= 48 && s[i] <= 57) && s[i] != '\0'; i++)
+		number = (number * 10) + (s[i] - 48);
+	return (number * sign);
 }
