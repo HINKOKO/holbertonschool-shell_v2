@@ -22,5 +22,5 @@ int new_exit(char *cmd, char **args, char **env)
 			return (1);
 	}
 	free_args(args);
-	exit(check);
+	return (check);
 }

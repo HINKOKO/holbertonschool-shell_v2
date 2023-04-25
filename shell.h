@@ -24,15 +24,6 @@ typedef struct built_in
 	int (*f)();
 } built_in;
 
-typedef struct passinfo
-{
-	char *arg;
-	char **argv;
-	char *path;
-	int status;
-} info_t;
-
-
 /* Libraries */
 #include <stdio.h>
 #include <string.h>
@@ -43,6 +34,7 @@ typedef struct passinfo
 #include <signal.h>
 #include <limits.h>
 #include <fcntl.h>
+#include <ctype.h>
 
 /* Program Running commands */
 
@@ -56,6 +48,8 @@ char *pathfinder(char *cmd, char *PATH);
 int (*check_builtin(char *command))(char *cmd, char **args, char **env);
 int new_exit(char *cmd, char **args, char **env);
 int change_dir(char *cmd, char **args, char **env);
+int _exit_me(char *cmd, char **args, char **env);
+
 
 /* Strings functions */
 
