@@ -25,3 +25,24 @@ int atoi_error(char *s)
 		number = (number * 10) + (s[i] - 48);
 	return (number * sign);
 }
+
+/**
+ * _isdigit - check if characters in input are number(s)
+ * @num: the "chars" to check
+ * Return: 0 if no digit, 1 if digit
+*/
+
+int _isdigit(char *num)
+{
+	int i = 0;
+
+	if (num == NULL)
+		return (0);
+	while (num[i])
+	{
+		if (num[i] < 48 || num[i] > 57)
+			return (0);
+		i++;
+	}
+	return (1);
+}

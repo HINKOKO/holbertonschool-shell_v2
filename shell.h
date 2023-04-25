@@ -37,32 +37,26 @@ typedef struct built_in
 #include <ctype.h>
 
 /* Program Running commands */
-
 int executor(char *buff, char **env, int line);
 void _prompt(void);
 int exec_path(char **args, char **env, int line);
 char *pathfinder(char *cmd, char *PATH);
 
 /* Builtin helpers functions */
-
 int (*check_builtin(char *command))(char *cmd, char **args, char **env);
 int new_exit(char *cmd, char **args, char **env);
 int change_dir(char *cmd, char **args, char **env);
 int _exit_me(char *cmd, char **args, char **env);
 
-
 /* Strings functions */
-
 char **get_args(char *buff);
 size_t wordcount(char *s);
 void free_args(char **args);
 
 /* signal handling */
-
 void handle_signal(__attribute__((unused)) int signum);
 
 /* Env functions */
-
 int print_env(char *cmd, char **args, char **env);
 
 
@@ -76,17 +70,13 @@ int _strncmp(char *s1, char *s2, size_t n);
 void _puts(char *str);
 int _putchar(char c);
 
-
-
-
 /* About environment */
 char *_getenv(char *name);
 int build_env(char *name, char *value, int overwrite);
 
-
-/* error management */
+/* error management // exit utilities */
 int atoi_error(char *s);
-
+int _isdigit(char *num);
 
 /* env variation */
 char **malloc_double(size_t size);
@@ -95,9 +85,6 @@ size_t overwrite_after(char *delim, char *str, char *dest);
 char **realloc_environ(char **env, size_t new_size);
 char *write_variable(const char *name, const char *val, char *dest);
 
-/* stream tools */
-
-
-
+/* stream tools to come */
 
 #endif
