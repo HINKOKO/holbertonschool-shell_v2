@@ -40,6 +40,10 @@ int main(int ac __attribute__((unused)), char **av, char **env)
 				exit(EXIT_SUCCESS);
 			else if (ret == 127)
 				exit(ERR_FND);
+			else if (ret != 0)
+			{
+				exit(ret);
+			}
 			line++;
 		}
 	}

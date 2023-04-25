@@ -16,6 +16,10 @@ int executor(char *buff, char **env, int line)
 	int (*statifior)(char *cmd, char **args, char **env);
 
 	args = get_args(buff);
+	if (args[0] && (_strcmp(args[0], "exit") == 0))
+	{
+		return (ret_path = new_exit('\0', args, env));
+	}
 	if (args[0])
 	{
 		statifior = check_builtin(args[0]);
