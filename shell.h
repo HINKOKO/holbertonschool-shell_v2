@@ -76,7 +76,6 @@ int _putchar(char c);
 
 /* About environment */
 char *_getenv(char *name);
-// int build_env(char *name, char *value, int overwrite);
 int build_env(char *name, char *value, int overwrite);
 char **malloc_double(size_t size);
 char **copy_double(char **old, char **new);
