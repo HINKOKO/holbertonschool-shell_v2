@@ -60,7 +60,6 @@ void handle_signal(__attribute__((unused)) int signum);
 /* Env functions */
 int print_env(char *cmd, char **args, char **env);
 
-// jojo la praline
 /* string utilities */
 int _strlen(const char *s);
 int _strcmp(char *s1, char *s2);
