@@ -26,7 +26,7 @@ int change_dir(char *cmd, char **args, char **env)
 		else
 			chdir_ret = chdir(dir);
 	}
-	else if (_strcmp(args[1], "-") == 0)
+	else if (*args[1] == '-')
 	{
 		if (!_getenv("OLDPWD"))
 		{
