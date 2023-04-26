@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _setenv - set a new env variable
+ * build_env - set a new env variable
  * @name: name of env variable to set || check
  * @value: value to assing to name
  * @overwrite: flag to ON / off overwriting
