@@ -23,6 +23,34 @@ int _strncmp(char *s1, char *s2, size_t n)
 }
 
 /**
+ * _strstr - mimic strstr function
+ * @haystack: the STring to look into
+ * @needle: the sub_string to find
+ * Return: NULL if no found, pointer to first char of sub_string found
+*/
+
+char *_strstr(char *haystack, char *needle)
+{
+	unsigned int i, j;
+	unsigned int needle_len = _strlen(needle);
+
+	if (!haystack || !needle)
+		return (NULL);
+
+	i = 0;
+	while (haystack[i])
+	{
+		j = 0;
+		while ((needle[j] == haystack[i + j]) && (needle[j] && haystack[i + j]))
+			j++;
+		if (needle_len == j)
+			return (&haystack[i]);
+		i++;
+	}
+	return (NULL);
+}
+
+/**
  * _puts - prints a string stdout
  * @str: pointer to string to be printed
 */

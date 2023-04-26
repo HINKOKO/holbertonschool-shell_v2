@@ -26,7 +26,7 @@ int change_dir(char *cmd, char **args, char **env)
 		else
 			chdir_ret = chdir(dir);
 	}
-	else if (*args[1] == '-')
+	else if (_strcmp(args[1], "-") == 0)
 	{
 		if (!_getenv("OLDPWD"))
 		{
@@ -45,8 +45,8 @@ int change_dir(char *cmd, char **args, char **env)
 	}
 	else
 	{
-		build_env("OLDPWD", _getenv("PWD"), 1);
-		build_env("PWD", getcwd(buffer, 1024), 1);
+		build_env("OLDPWD", _getenv("PWD"));
+		build_env("PWD", getcwd(buffer, 1024));
 	}
 	return (0);
 }

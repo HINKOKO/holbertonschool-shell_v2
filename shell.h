@@ -35,6 +35,7 @@ typedef struct built_in
 #include <limits.h>
 #include <fcntl.h>
 #include <ctype.h>
+#include <errno.h>
 
 /* Program Running commands */
 int executor(char *buff, char **env, int line);
@@ -67,23 +68,22 @@ char *_strcpy(char *dest, const char *src);
 char *_strcat(char *dest, char *src);
 char *_strdup(const char *str);
 int _strncmp(char *s1, char *s2, size_t n);
+char *_strstr(char *haystack, char *needle);
+
+
+
 void _puts(char *str);
 int _putchar(char c);
 
 /* About environment */
 char *_getenv(char *name);
-int build_env(char *name, char *value, int overwrite);
+// int build_env(char *name, char *value, int overwrite);
+void build_env(char *name, char *value);
+
 
 /* error management // exit utilities */
 int atoi_error(char *s);
 int _isdigit(char *num);
-
-/* env variation */
-char **malloc_double(size_t size);
-char **copy_double(char **old, char **new);
-size_t overwrite_after(char *delim, char *str, char *dest);
-char **realloc_environ(char **env, size_t new_size);
-char *write_variable(const char *name, const char *val, char *dest);
 
 /* stream tools to come */
 
