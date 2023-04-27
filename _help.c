@@ -15,7 +15,7 @@ int help_user(char *cmd, char **args, char **env)
 	(void)env;
 	(void)args;
 
-	_puts("help 'name' to find out more about the function `name'\n\t
-		Coming soon...\n");
+	_puts("help `name` to find out more about the function `name`\n");
+	_puts("\tComing soon...\n");
 	return (0);
 }
