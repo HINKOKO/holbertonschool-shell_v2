@@ -30,3 +30,35 @@ int build_env(char *name, char *value, int overwrite)
 		return (-1);
 	return (0);
 }
+
+/**
+ * set_env - set an env var simply
+ * @name: name var to set
+ * @val: value of the var
+*/
+
+void set_env(char *name, char *val)
+{
+	int i = 0;
+	int j, k;
+
+	while (environ[i] != NULL)
+	{
+		if (_strstr(environ[i], name))
+		{
+			j = 0, k = 0;
+			while (name[j])
+			{
+				if (environ[i][j] == name[j])
+					k++;
+				j++;
+			}
+			if (k == _strlen(name))
+			{
+				_strcpy(_strstr(environ[i], name) + _strlen(name) + 1, val);
+				break;
+			}
+		}
+		i++;
+	}
+}

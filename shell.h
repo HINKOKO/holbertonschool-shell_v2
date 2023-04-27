@@ -67,6 +67,8 @@ char *_strcpy(char *dest, const char *src);
 char *_strcat(char *dest, char *src);
 char *_strdup(const char *str);
 int _strncmp(char *s1, char *s2, size_t n);
+char *_strstr(char *hays, char *need);
+
 
 
 
@@ -75,6 +77,7 @@ int _putchar(char c);
 
 /* About environment */
 char *_getenv(char *name);
+void set_env(char *name, char *val);
 int build_env(char *name, char *value, int overwrite);
 char **malloc_double(size_t size);
 char **copy_double(char **old, char **new);
@@ -88,5 +91,7 @@ int atoi_error(char *s);
 int _isdigit(char *num);
 
 /* stream tools to come */
+
+
 
 #endif

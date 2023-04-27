@@ -22,6 +22,36 @@ int _strncmp(char *s1, char *s2, size_t n)
 	return (0);
 }
 
+
+/**
+ * _strstr - locates a substring in a string
+ * @hays: the haystack to find in the needle
+ * @need: the needle `string` to find
+ * Return: NULL if no match, pointer to begin of substring otherwise
+*/
+
+char *_strstr(char *hays, char *need)
+{
+	unsigned int i, j;
+	unsigned int len_need = _strlen(need);
+
+	if (!hays || !need)
+		return (NULL);
+
+	i = 0;
+	while (hays[i])
+	{
+		j = 0;
+		while ((need[j] == hays[i + j]) && (need[j] && hays[i + j]))
+			j++;
+		if (len_need == j)
+			/* len matches the iteration of j */
+			return (&hays[i]);
+		i++;
+	}
+	return (NULL);
+
+}
 /**
  * _puts - prints a string stdout
  * @str: pointer to string to be printed
