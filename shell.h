@@ -48,6 +48,8 @@ int (*check_builtin(char *command))(char *cmd, char **args, char **env);
 int new_exit(char *cmd, char **args, char **env);
 int change_dir(char *cmd, char **args, char **env);
 int _exit_me(char *cmd, char **args, char **env);
+int help_user(char *cmd, char **args, char **env);
+
 
 /* Strings functions */
 char **get_args(char *buff);
@@ -68,7 +70,7 @@ char *_strcat(char *dest, char *src);
 char *_strdup(const char *str);
 int _strncmp(char *s1, char *s2, size_t n);
 char *_strstr(char *hays, char *need);
-void _puts(char *str);
+int _puts(char *str);
 int _putchar(char c);
 
 /* About environment */
@@ -86,6 +88,8 @@ char *write_variable(const char *name, const char *val, char *dest);
 /* error management // exit utilities */
 int atoi_error(char *s);
 int _isdigit(char *num);
+
+
 
 /* stream tools to come */
 

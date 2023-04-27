@@ -57,17 +57,11 @@ char *_strstr(char *hays, char *need)
  * @str: pointer to string to be printed
 */
 
-void _puts(char *str)
+int _puts(char *str)
 {
-	int i = 0;
-
-	if (!str)
-		return;
-	while (str[i] != '\0')
-	{
-		_putchar(str[i]);
-		i++;
-	}
+	size_t i = _strlen(str);
+	write(1, str, i);
+	return (i);
 }
 
 /**

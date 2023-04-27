@@ -15,6 +15,7 @@ int (*check_builtin(char *command))(char *cmd, char **args, char **env)
 		{"env", print_env},
 		{"cd", change_dir},
 		{"setenv", my_setenv},
+		{"help", help_user},
 		{NULL, NULL},
 	};
 
