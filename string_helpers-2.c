@@ -55,11 +55,13 @@ char *_strstr(char *hays, char *need)
 /**
  * _puts - prints a string stdout
  * @str: pointer to string to be printed
+ * Return: number of chars written
 */
 
 int _puts(char *str)
 {
 	size_t i = _strlen(str);
+
 	write(1, str, i);
 	return (i);
 }
