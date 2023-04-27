@@ -32,33 +32,44 @@ int build_env(char *name, char *value, int overwrite)
 }
 
 /**
- * set_env - set an env var simply
- * @name: name var to set
- * @val: value of the var
+ * my_setenv - handle the built-in setenv
+ * @cmd: unused
+ * @args: args passed to built-in
+ * @env: Unused
+ * Return: 0 success: -1 otherwise
 */
 
-void set_env(char *name, char *val)
+int my_setenv(char *cmd, char **args, char **env)
 {
-	int i = 0;
-	int j, k;
+	size_t i = 0;
+	int num = 0;
+	(void)cmd;
+	(void)env;
+
+	while (args[num] != NULL)
+		num++;
+	if (num != 3)
+	{
+		fprintf(stderr, "Wrong usage of builtin\n");
+		return (-1);
+	}
 
 	while (environ[i] != NULL)
 	{
-		if (_strstr(environ[i], name))
+		if (_strcmp(environ[i], args[1]))
 		{
-			j = 0, k = 0;
-			while (name[j])
-			{
-				if (environ[i][j] == name[j])
-					k++;
-				j++;
-			}
-			if (k == _strlen(name))
-			{
-				_strcpy(_strstr(environ[i], name) + _strlen(name) + 1, val);
-				break;
-			}
+			overwrite_after("=", (char *)args[2], environ[i]);
+			return (0);
 		}
+		else if (!(_strcmp(environ[i], args[1])))
+			return (0);
 		i++;
 	}
+	environ = realloc_environ(environ, sizeof(char *) * (i + 1));
+	if (!environ)
+		return (-1);
+	environ[i] = write_variable(args[1], args[2], environ[i]);
+	if (environ[i] == NULL)
+		return (-1);
+	return (0);
 }

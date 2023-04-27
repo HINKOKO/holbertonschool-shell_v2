@@ -50,8 +50,8 @@ char *_strstr(char *hays, char *need)
 		i++;
 	}
 	return (NULL);
-
 }
+
 /**
  * _puts - prints a string stdout
  * @str: pointer to string to be printed

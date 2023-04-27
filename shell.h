@@ -68,16 +68,13 @@ char *_strcat(char *dest, char *src);
 char *_strdup(const char *str);
 int _strncmp(char *s1, char *s2, size_t n);
 char *_strstr(char *hays, char *need);
-
-
-
-
 void _puts(char *str);
 int _putchar(char c);
 
 /* About environment */
+
 char *_getenv(char *name);
-void set_env(char *name, char *val);
+int my_setenv(char *cmd, char **args, char **env);
 int build_env(char *name, char *value, int overwrite);
 char **malloc_double(size_t size);
 char **copy_double(char **old, char **new);
