@@ -47,14 +47,16 @@ After creating B, Ritchie and teammates moved to language C.
         - [_setenv](https://github.com/HINKOKO/holbertonschool-shell_v2/blob/main/_setenv.c) - set a new environment variable, WARNING => need fixes for somes cases
         - [_help](https://github.com/HINKOKO/holbertonschool-shell_v2/blob/main/_help.c) - displays a message, help about functions will come later
 - Program running commands: <br>
-        - [executor](https://github.com/NehemieMbg/holbertonschool-simple_shell/blob/main/executor.c): execute process expected <br>
-        - [exec_path](https://github.com/NehemieMbg/holbertonschool-simple_shell/blob/main/execpath.c): search a command along the PATH <br>
-        - [pathfinder](https://github.com/NehemieMbg/holbertonschool-simple_shell/blob/main/path_finder.c): Look in PATH if command exist <br>
+        - [executor](https://github.com/HINKOKO/holbertonschool-shell_v2/blob/main/executor.c): execute process expected <br>
+        - [exec_path](https://github.com/HINKOKO/holbertonschool-shell_v2/blob/main/execpath.c): search a command along the PATH <br>
+        - [pathfinder](https://github.com/HINKOKO/holbertonschool-shell_v2/blob/main/pathfinder.c): Look in PATH if command exist <br>
 - String Functions: <br>
-        - [Parser](https://github.com/NehemieMbg/holbertonschool-simple_shell/blob/main/Parser.c): get_args function creates token words with the command entered, free_argsfunction frees the space allocated for the array of args. <br>
-        - [wordcount](https://github.com/NehemieMbg/holbertonschool-simple_shell/blob/main/wordcount.c): create tokenized words. <br>
+        - [Parser](https://github.com/HINKOKO/holbertonschool-shell_v2/blob/main/parser.c): get_args function creates token words with the command entered, free_argsfunction frees the space allocated for the array of args. <br>
+        - [wordcount](https://github.com/HINKOKO/holbertonschool-shell_v2/blob/main/wordcount.c): create tokenized words. <br>
+        - [string-helpers](https://github.com/HINKOKO/holbertonschool-shell_v2/blob/main/string_helpers.c) - Various string functions to handle manipulations of arguments <br>
+        - [string-helpers-2](https://github.com/HINKOKO/holbertonschool-shell_v2/blob/main/string_helpers-2.c) Continuation of [string-helpers](https://github.com/HINKOKO/holbertonschool-shell_v2/blob/main/string_helpers.c) <br>
 - Signal Functions: <br>
-        - [handle_signal](): function that handle the signal inputed by (Ctrl^C), doesn't exit the shell but displays a new line. <br> 
+        - [handle_signal](https://github.com/HINKOKO/holbertonschool-shell_v2/blob/main/handle_signal.c) - Function to catch the signal SIGINT (Ctrl^C) for not exiting the shell but displays a new line. <br> 
 
 ## Requirements
 
