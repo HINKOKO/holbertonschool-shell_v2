@@ -23,8 +23,7 @@ If no command is found, it will print an error message.
 .PP
 Compile the Simple Shell using the Makefile provided with the repository using command \[lq]make all\[rq], it will lauch compilation with the options shown below:
 .PP
-.B \ \ \ \ \ gcc \[en]Wall \-Werror \-Wextra \-pedantic \-std=gnu89 *.c \-o
-hsh
+.B \ \ \ \ \ gcc \[en]Wall \-Werror \-Wextra \-pedantic *.c \-o hsh
 .PP
 Note the use of the wildcard \[lq]*\[rq] which will compile all the C
 programs concurrently.
