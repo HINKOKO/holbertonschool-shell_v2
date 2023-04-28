@@ -51,6 +51,7 @@ int _exit_me(char *cmd, char **args, char **env);
 int help_user(char *cmd, char **args, char **env);
 
 
+
 /* Strings functions */
 char **get_args(char *buff);
 size_t wordcount(char *s);
@@ -73,16 +74,27 @@ char *_strstr(char *hays, char *need);
 int _puts(char *str);
 int _putchar(char c);
 
+
 /* About environment */
 
 char *_getenv(char *name);
 int my_setenv(char *cmd, char **args, char **env);
 int build_env(char *name, char *value, int overwrite);
+
+/* /////// */
+int _unsetenv(char *cmd, char **args, char **env);
+
+
 char **malloc_double(size_t size);
 char **copy_double(char **old, char **new);
 size_t overwrite_after(char *delim, char *str, char *dest);
-char **realloc_environ(char **env, size_t new_size);
+char **realloc_environ(char **environ, size_t new_size);
 char *write_variable(const char *name, const char *val, char *dest);
+
+int sethanv(char *name, char *value, int overwrite);
+int add_environ(char *name, char *value, int replace);
+
+/* ///////////////////////// WORK ///////// */
 
 
 /* error management // exit utilities */

@@ -73,3 +73,46 @@ int my_setenv(char *cmd, char **args, char **env)
 		return (-1);
 	return (0);
 }
+
+/**
+ * _unsetenv - removes an env variable
+ * @cmd: unused, there to match proto of built-in
+ * @args: used to check the name inputed
+ * @env: unused, there to match proto of built-in
+ * Return: 0 on success
+*/
+
+int _unsetenv(char *cmd, char **args, char **env)
+{
+	int i = 0, j = 0, k = 0;
+	(void)cmd;
+	(void)env;
+
+	if (!args || *args == NULL)
+		return (-1);
+
+	while (env[i] && args[1])
+	{
+		while (args[1][k])
+		{
+			if (!env[i])
+				return (-1);
+			if (env[i][j] == args[1][k])
+				j++, k++;
+			else
+				j = 0, k = 0, i++;
+		}
+
+		if (env[i][j] == '=')
+		{
+			env[i] = NULL;
+			break;
+		}
+		j = 0;
+		k = 0;
+		i++;
+	}
+	if (!env[i])
+		return (0);
+	return (-1);
+}
