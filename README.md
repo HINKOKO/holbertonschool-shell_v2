@@ -13,7 +13,6 @@
 ## Table of contents
 
 
-
 A brief description of what this project does and who it's for
 
 - [Description](#description) 
@@ -37,13 +36,16 @@ After creating B, Ritchie and teammates moved to language C.
 
 ## File structure
 
-- [Authors](https://github.com/NehemieMbg/holbertonschool-simple_shell/blob/main/AUTHORS.md) - list of contributors to this project
-- [man_simple_shell](https://github.com/NehemieMbg/holbertonschool-simple_shell/blob/main/man_shell) - manual page for the simple_shell
-- [shell.h](https://github.com/NehemieMbg/holbertonschool-simple_shell/blob/main/shell.h) - header program file
+- [Authors](https://github.com/HINKOKO/holbertonschool-shell_v2/blob/main/AUTHORS.md) - list of contributors to this project
+- [man_1_hsh](https://github.com/HINKOKO/holbertonschool-shell_v2/blob/main/man_1_hsh) - manual page for the simple_shell
+- [shell.h](https://github.com/HINKOKO/holbertonschool-shell_v2/blob/main/shell.h) - header program file
 - Major builtins functions supported:<br>
-        - [check_builtins.c](https://github.com/NehemieMbg/holbertonschool-simple_shell/blob/main/check_builtin.c) - check if user's command matches a builtin <br>
+        - [check_builtins.c](https://github.com/HINKOKO/holbertonschool-shell_v2/blob/main/check_builtin.c) - check if user's command matches a builtin <br>
         - [new_exit](https://github.com/NehemieMbg/holbertonschool-simple_shell/blob/main/new_exit.c) - exits the shell <br>
         - [print_env](https://github.com/NehemieMbg/holbertonschool-simple_shell/blob/main/print_env.c) - prints the shell environnement's variable to standard output <br>
+        - [_cd](https://github.com/HINKOKO/holbertonschool-shell_v2/blob/main/_cd.c) - changes the current directory to the one specified, with no parameters, `cd` command takes you home/, 'cd - ' is only supported "once" (one call available, problem with updating environment)
+        - [_setenv](https://github.com/HINKOKO/holbertonschool-shell_v2/blob/main/_setenv.c) - set a new environment variable, WARNING => need fixes for somes cases
+        - [_help](https://github.com/HINKOKO/holbertonschool-shell_v2/blob/main/_help.c) - displays a message, help about functions will come later
 - Program running commands: <br>
         - [executor](https://github.com/NehemieMbg/holbertonschool-simple_shell/blob/main/executor.c): execute process expected <br>
         - [exec_path](https://github.com/NehemieMbg/holbertonschool-simple_shell/blob/main/execpath.c): search a command along the PATH <br>
