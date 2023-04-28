@@ -37,7 +37,7 @@ After creating B, Ritchie and teammates moved to language C.
 ## File structure
 
 - [Authors](https://github.com/HINKOKO/holbertonschool-shell_v2/blob/main/AUTHORS.md) - list of contributors to this project
-- [man_1_hsh](https://github.com/HINKOKO/holbertonschool-shell_v2/blob/main/man_1_hsh) - manual page for the simple_shell
+- [man_1_hsh](https://github.com/HINKOKO/holbertonschool-shell_v2/blob/main/man_1_hsh) - manual page for the simple_shell (in your terminal, run man ./man_1_hsh)
 - [shell.h](https://github.com/HINKOKO/holbertonschool-shell_v2/blob/main/shell.h) - header program file
 - Major builtins functions supported:<br>
         - [check_builtins.c](https://github.com/HINKOKO/holbertonschool-shell_v2/blob/main/check_builtin.c) - check if user's command matches a builtin <br>
